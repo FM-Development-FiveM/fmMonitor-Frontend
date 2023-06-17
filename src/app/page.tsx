@@ -14,20 +14,22 @@ export default function Page() {
   }
 
   return (
-    <main className="fmWelcomeScreen">
-      <div className="fmWelcomeCenterContent">
+    <main className="fmScreen fmCenterScreen fmWelcomeScreen">
+      <div className="fmCenterContent">
         <span className="fmWelcomeCenterContentTitle">
           Welcome to fmMonitor!
         </span><br></br>
-        <span className="fmWelcomeCenterContentSubtitle">The All In One FiveM Server Manager Tool</span>
-        <br></br>
-        <Button variant="outline" className="fmWelcomeCenterContentButton">Manage Servers</Button>
-        <br></br>
+
+        <span className="fmWelcomeCenterContentSubtitle">The All In One FiveM Server Manager Tool</span><br></br>
+
+        <Button variant="outline" className="fmWelcomeCenterContentButton">Manage Servers</Button><br></br>
+
         <div className="fmWelcomeCenterContentCheckbox">
           <Label className="fmWelcomeCenterContentCheckboxLabel" htmlFor="donotshow">Don’t show this screen again!</Label>
           <Checkbox className="fmWelcomeCenterContentCheckboxCheck" id="donotshow" />
         </div>
       </div>
+
       <span className="fmWelcomeCopyrightFooter">© 2023 FM Development. All rights reserved</span>
     </main>
   )

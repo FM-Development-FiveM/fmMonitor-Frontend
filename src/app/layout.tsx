@@ -1,9 +1,14 @@
 import './globals.css'
 import './themes.css'
-import { Inter } from 'next/font/google'
-import { Metadata } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Metadata } from 'next'
+import { Quicksand } from 'next/font/google'
+
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  variable: '--font-quicksand',
+  preload: true
+})
 
 export const metadata: Metadata = {
   title: `${process.env.pageTitle}`,
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="default">
-      <body className={inter.className}>{children}</body>
+      <body className={"fmMonitorBody " + quicksand.variable}>{children}</body>
     </html>
   )
 }
