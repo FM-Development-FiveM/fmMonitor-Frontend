@@ -2,26 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ 
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --muted: 210 40% 96.1%;
+    --popover: 0 0% 100%;
+    --card: 0 0% 100%;
+    --radius: 0.5rem;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.fmWelcomeScreen {
+  position: absolute;
+  background: var(--background-image), rgba(32, 32, 32, 0.5);
+  background-blend-mode: overlay;
+  background-size: 60vw;
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-clip: content-box;
+  width: 100%;
+  height: 100%;
+  animation: bgAnim 100s linear 0s infinite;
+  transition: background .2s ease;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.fmWelcomeCenterContent {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 640px;
+  width: 640px;
+  max-width: 640px;
+  min-width: 340px;
+  height: 261px;
+  left: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: translatex(-50%);
+  text-align: center;
+}
+
+.fmWelcomeCenterContentTitle {
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.fmWelcomeCenterContentSubtitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.fmWelcomeCenterContentButton {
+  margin-top: 40px;
+  width: 330px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.fmWelcomeCenterContentCheckbox {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.fmWelcomeCenterContentCheckbox .fmWelcomeCenterContentCheckboxLabel {
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fmWelcomeCenterContentCheckbox .fmWelcomeCenterContentCheckboxCheck {
+  position: absolute;
+  border-color: white !important;
+  margin-top: 3px;
+}
+
+.data-\[state\=checked\]\:bg-primary[data-state=checked] {
+  background-color: hsl(var(--checkbox-checked-bg)) !important;
+}
+
+.fmWelcomeCopyrightFooter {
+  position: absolute;
+  width: auto !important;
+  height: auto !important;
+  left: 3px;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  bottom: 3px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+@keyframes bgAnim {
+  to {
+    background-position: 0 0;
+  }
+  from {
+    background-position: -100vw 100vh;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }

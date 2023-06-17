@@ -1,0 +1,44 @@
+html[data-theme="default"] {
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkBlue.png");
+
+    --accent: 232 100% 32%;
+    --accent-foreground: 210 40% 96.1%;
+
+    --checkbox-checked-bg: 232 100% 32%;
+}
+
+html[data-theme="dark-green"] {
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkGreen.png");
+
+    --accent: 123 100% 32%;
+    --accent-foreground: 210 40% 96.1%;
+
+    --checkbox-checked-bg: 123 100% 32%;
+}
+
+html[data-theme="dark-purple"] {
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkPurple.png");
+
+    --accent: 266 100% 32%;
+    --accent-foreground: 210 40% 96.1%;
+
+    --checkbox-checked-bg: 266 100% 32%;
+}
+
+html[data-theme="dark-red"] {
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkRed.png");
+ 
+    --accent: 360 100% 32%;
+    --accent-foreground: 210 40% 96.1%;
+
+    --checkbox-checked-bg: 360 100% 32%;
+}
+
+html[data-theme="turquoise"] {
+    --background-image: url("/assets/backgrounds/fmMonitor-Turquoise.png");
+
+    --accent: 177 100% 32%;
+    --accent-foreground: 210 40% 96.1%;
+
+    --checkbox-checked-bg: 177 100% 32%;
+}
