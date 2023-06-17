@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
  
 @layer base {
   :root {
@@ -13,53 +11,60 @@
   }
 }
 
-body {
+.fmMonitorBody {
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-quicksand) !important;
 }
 
-.fmWelcomeScreen {
+.fmScreen {
   position: absolute;
   background: var(--background-image), rgba(32, 32, 32, 0.5);
   background-blend-mode: overlay;
-  background-size: 60vw;
+  background-size: 90vh;
   background-repeat: repeat;
   background-position: 0 0;
   background-clip: content-box;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   animation: bgAnim 100s linear 0s infinite;
   transition: background .2s ease;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
 }
 
-.fmWelcomeCenterContent {
+.fmCenterScreen {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+
+.fmFirstSetupScreen {
+  
+}
+
+.fmCenterContent {
   position: relative;
-  flex-grow: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
   flex-shrink: 1;
-  flex-basis: 640px;
-  width: 640px;
-  max-width: 640px;
+  width: 627px;
+  max-width: 627px;
   min-width: 340px;
-  height: 261px;
+  word-wrap: normal;
   left: 50%;
-  margin-top: auto;
-  margin-bottom: auto;
   transform: translatex(-50%);
+  align-items: stretch;
   text-align: center;
+  overflow: hidden;
 }
 
 .fmWelcomeCenterContentTitle {
   font-weight: 900;
-  font-size: 48px;
+  font-size: 55px;
 }
 
 .fmWelcomeCenterContentSubtitle {
   font-weight: 500;
   font-size: 32px;
-  line-height: 39px;
+  line-height: 60px;
   text-decoration-line: underline;
   text-underline-offset: 10px;
 }
@@ -95,13 +100,11 @@ body {
 
 .fmWelcomeCopyrightFooter {
   position: absolute;
-  width: auto !important;
-  height: auto !important;
+  width: 305px !important;
+  max-width: 305px !important;
+  min-width: 305px !important;
   left: 3px;
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
   bottom: 3px;
-  font-weight: 400;
   font-size: 15px;
 }
 
@@ -111,15 +114,5 @@ body {
   }
   from {
     background-position: -100vw 100vh;
-  }
-}
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

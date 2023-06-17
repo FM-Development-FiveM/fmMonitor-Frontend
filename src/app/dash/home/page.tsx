@@ -12,8 +12,8 @@ if (skipWelcomeScreen) {
 
 export default function Page() {
   return (
-    <main className="fmWelcomeScreen">
-      <div className="fmWelcomeCenterContent">
+    <main className="fmScreen fmCenterScreen fmWelcomeScreen">
+      <div className="fmCenterContent">
         <span className="fmWelcomeCenterContentTitle">
           Welcome to fmMonitor Dashboard!
         </span><br></br>
