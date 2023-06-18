@@ -1,7 +1,4 @@
-import Image from 'next/image'
-
 import { redirect } from 'next/navigation'
-
 import { Button } from '../../components/ui/button'
 import { Checkbox } from '../../components/ui/checkbox'
 import { Label } from '../../components/ui/label'
@@ -16,11 +13,11 @@ export default function Page() {
   return (
     <main className="fmScreen fmCenterScreen fmWelcomeScreen">
       <div className="fmCenterContent">
-        <span className="fmWelcomeCenterContentTitle">
+        <span className="fmCenterContentTitle">
           Welcome to fmMonitor!
         </span><br></br>
 
-        <span className="fmWelcomeCenterContentSubtitle">The All In One FiveM Server Manager Tool</span><br></br>
+        <span className="fmCenterContentSubtitle canSelectText">The All In One FiveM Server Manager Tool</span><br></br>
 
         <Button variant="outline" className="fmWelcomeCenterContentButton">Manage Servers</Button><br></br>
 
@@ -30,7 +27,7 @@ export default function Page() {
         </div>
       </div>
 
-      <span className="fmWelcomeCopyrightFooter">© 2023 FM Development. All rights reserved</span>
+      <span className="fmCopyrightFooter">© 2023 FM Development. All rights reserved</span>
     </main>
   )
 }
