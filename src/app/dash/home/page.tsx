@@ -1,23 +1,21 @@
-import Image from 'next/image'
+import { redirect } from 'next/navigation'
 
-import { NextResponse } from 'next/server'
-
-const skipWelcomeScreen: boolean = false;
-
-/*
-if (skipWelcomeScreen) {
-  NextResponse.redirect(new URL('/dash/home'));
-}
-*/
+const userLoggedIn: boolean = false;
 
 export default function Page() {
+  if (!userLoggedIn) {
+    redirect('/auth/login');
+  }
+
   return (
     <main className="fmScreen fmCenterScreen fmWelcomeScreen">
       <div className="fmCenterContent">
-        <span className="fmWelcomeCenterContentTitle">
+        <span className="fmCenterContentTitle">
           Welcome to fmMonitor Dashboard!
         </span><br></br>
       </div>
+
+      <span className="fmCopyrightFooter">© 2023 FM Development. All rights reserved</span>
     </main>
   )
 }
