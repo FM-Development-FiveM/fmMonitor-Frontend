@@ -17,7 +17,7 @@ export default function Page() {
           Welcome to fmMonitor!
         </span><br></br>
 
-        <span className="fmCenterContentSubtitle canSelectText">The All In One FiveM Server Manager Tool</span><br></br>
+        <span className="fmCenterContentSubtitle">The All In One FiveM Server Manager Tool</span><br></br>
 
         <Button variant="outline" className="fmWelcomeCenterContentButton">Manage Servers</Button><br></br>
 
