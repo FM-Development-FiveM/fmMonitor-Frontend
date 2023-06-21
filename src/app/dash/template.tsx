@@ -1,13 +1,28 @@
-import { NextPage, PageConfig } from 'next'
+'use client'
+
 import { Button } from '../../../components/ui/button'
+import * as RoutesInfo from '../routes';
+import { usePathname } from 'next/navigation'
 
 export default function DashboardTemplate({
-  children,
+  children
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode
 }) {
+  var pageName = RoutesInfo.getPageName(usePathname());
+
   return (
     <main className="fmScreen fmDashboardScreen">
+      <div className="fmDashboardTopNav">
+        <span className="fmDashboardTopNavLeft">
+          {pageName}
+        </span>
+
+        <span className="fmDashboardTopNavRight">
+          Username
+        </span>
+      </div>
+
       <div className="fmDashboardLeftNavBrand">
         <span>fmMonitor</span>
       </div>
@@ -18,10 +33,6 @@ export default function DashboardTemplate({
             <span style={{ textAlign: "right" }}>Test</span>
           </Button>
         </div>
-      </div>
-
-      <div className="fmDashboardTopNav">
-        TemplatePageName - Need to automate this in the child page file
       </div>
 
       <div className="fmDashboardContent">

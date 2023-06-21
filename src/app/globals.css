@@ -151,8 +151,8 @@
   background: rgba(51, 51, 51, 0.8);
   margin: auto;
   text-align: center;
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
 }
 
 .fmDashboardLeftNavBrand span {
@@ -188,6 +188,7 @@
 
 .fmDashboardTopNav {
   position: absolute;
+  display: flex;
   width: calc(100% - 288px);
   height: 61px;
   float: right;
@@ -195,6 +196,20 @@
   top: 0px;
   background: rgba(51, 51, 51, 0.8);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
+}
+
+.fmDashboardTopNavLeft {
+  position: inherit;
+  left: 0px;
+  font-size: 20px;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+
+.fmDashboardTopNavRight {
+  position: inherit;
+  right: 0px;
 }
 
 .fmDashboardContent {
