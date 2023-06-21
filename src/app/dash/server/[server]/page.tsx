@@ -5,7 +5,7 @@ import React from 'react';
 
 const userLoggedIn: boolean = true;
 
-export default function Page() {
+export default function Page({ params }: { params: { server: string } }) {
 
   React.useEffect(()=> {
     if (!userLoggedIn) {
@@ -15,7 +15,7 @@ export default function Page() {
 
   return (
     <div>
-      Dahboard Home Content (Child)
+      Server {params.server} Page
     </div>
   )
 }
