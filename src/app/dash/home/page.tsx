@@ -1,21 +1,23 @@
+'use client'
+
 import { redirect } from 'next/navigation'
+import { Props } from 'next/script';
+import React from 'react';
 
-const userLoggedIn: boolean = false;
+const userLoggedIn: boolean = true;
 
-export default function Page() {
-  if (!userLoggedIn) {
-    redirect('/auth/login');
-  }
+export default function Page({ pageTitleValue = "Dashboard" }) {
+  //const pageTitleValue: string = "Dashboard";
+
+  React.useEffect(()=> {
+    if (!userLoggedIn) {
+        redirect('/auth/login');;
+    }
+  });
 
   return (
-    <main className="fmScreen fmCenterScreen fmWelcomeScreen">
-      <div className="fmCenterContent">
-        <span className="fmCenterContentTitle">
-          Welcome to fmMonitor Dashboard!
-        </span><br></br>
-      </div>
-
-      <span className="fmCopyrightFooter">© 2023 FM Development. All rights reserved</span>
-    </main>
+    <div>
+      Dahboard Home Content (Child)
+    </div>
   )
 }

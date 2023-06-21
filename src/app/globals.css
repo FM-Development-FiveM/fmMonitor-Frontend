@@ -60,6 +60,10 @@
   
 }
 
+.fmDashboardScreen {
+  
+}
+
 .fmCenterContent {
   position: relative;
   flex-direction: column;
@@ -135,6 +139,73 @@
   margin-left: -10px;
 }
 
+.fmDashboardLeftNavBrand {
+  position: absolute;
+  width: 288px;
+  display: flex;
+  font-size: 25px;
+  font-weight: 700;
+  float: left;
+  height: 61px;
+  top: 0px;
+  background: rgba(51, 51, 51, 0.8);
+  margin: auto;
+  text-align: center;
+  align-items:center;
+  justify-content:center;
+}
+
+.fmDashboardLeftNavBrand span {
+  color: #fc3735;
+  background: linear-gradient(to right, #00ffe5, #b6ff77, #47d8f5);
+  background-size: 1600px 200px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 5s;
+  animation-name: fmMonitorTitleColorAnimation;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.fmDashboardLeftNav {
+  position: absolute;
+  width: 290px;
+  height: calc(100% - 61px);
+  bottom: 0px;
+  float: left;
+  background: rgba(51, 51, 51, 0.8);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.fmDashboardLeftNavBottom {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.fmDashboardTopNav {
+  position: absolute;
+  width: calc(100% - 288px);
+  height: 61px;
+  float: right;
+  right: 0px;
+  top: 0px;
+  background: rgba(51, 51, 51, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.fmDashboardContent {
+  position: absolute;
+  top: 61px;
+  left: 290px;
+  width: calc(100% - 288px);
+  height: calc(100% - 61px);
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
 .fmWelcomeCenterContentCheckbox .fmWelcomeCenterContentCheckboxLabel {
   margin-right: 10px;
   font-weight: 400;
@@ -157,6 +228,23 @@
   left: 3px;
   bottom: 0px;
   font-size: 15px;
+}
+
+.fmCopyrightFooterRight {
+  position: fixed;
+  height: 23px;
+  right: 3px;
+  bottom: 0px;
+  font-size: 15px;
+}
+
+@keyframes fmMonitorTitleColorAnimation {
+  0% {
+    background-position: 0 1600px;
+  }
+  100% {
+    background-position: 1600px 0;
+  }
 }
 
 @keyframes bgAnim {
