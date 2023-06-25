@@ -6,9 +6,7 @@ import { Label } from '../../components/ui/label'
 const skipWelcomeScreen: boolean = false;
 
 export default function Page() {
-  if (skipWelcomeScreen) {
-    redirect('/dash/home');
-  }
+  if (skipWelcomeScreen) redirect('/dash/home');
 
   return (
     <main className="fmScreen fmCenterScreen fmWelcomeScreen">

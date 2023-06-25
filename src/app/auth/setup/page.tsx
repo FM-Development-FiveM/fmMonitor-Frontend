@@ -10,9 +10,7 @@ const fmMonitorAlreadySetup: boolean = false;
 
 export default function Page() {
     React.useEffect(()=> {
-        if (fmMonitorAlreadySetup) {
-            redirect('/auth/login');;
-        }
+        if (fmMonitorAlreadySetup) redirect('/auth/login');
     });
 
     const [getPasswordType, setPasswordType] = React.useState("password");

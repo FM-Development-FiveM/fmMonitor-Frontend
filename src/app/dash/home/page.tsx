@@ -8,14 +8,12 @@ const userLoggedIn: boolean = true;
 export default function Page() {
 
   React.useEffect(()=> {
-    if (!userLoggedIn) {
-        redirect('/auth/login');;
-    }
+    if (!userLoggedIn) redirect('/auth/login');
   });
 
   return (
     <div>
-      Dahboard Home Content (Child)
+      Dahboard Home
     </div>
   )
 }
