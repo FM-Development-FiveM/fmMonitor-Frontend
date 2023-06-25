@@ -1,5 +1,6 @@
 html[data-theme="default"] {
-    --background-image: url("/assets/backgrounds/fmMonitor-DarkBlue.png");
+    /* --background-image: url("ASSETS PATH FOR DEV"), url("ASSETS PATH FOR PROD CDN") */
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkBlue.png"), url("/fmMonitor/assets/backgrounds/fmMonitor-DarkBlue.png");
 
     --accent: 232 100% 32%;
     --accent-foreground: 210 40% 96.1%;
@@ -8,7 +9,8 @@ html[data-theme="default"] {
 }
 
 html[data-theme="dark-green"] {
-    --background-image: url("/assets/backgrounds/fmMonitor-DarkGreen.png");
+    /* --background-image: url("ASSETS PATH FOR DEV"), url("ASSETS PATH FOR PROD CDN") */
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkGreen.png"), url("/fmMonitor/assets/backgrounds/fmMonitor-DarkGreen.png");
 
     --accent: 123 100% 32%;
     --accent-foreground: 210 40% 96.1%;
@@ -17,7 +19,8 @@ html[data-theme="dark-green"] {
 }
 
 html[data-theme="dark-purple"] {
-    --background-image: url("/assets/backgrounds/fmMonitor-DarkPurple.png");
+    /* --background-image: url("ASSETS PATH FOR DEV"), url("ASSETS PATH FOR PROD CDN") */
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkPurple.png"), url("/fmMonitor/assets/backgrounds/fmMonitor-DarkPurple.png");
 
     --accent: 266 100% 32%;
     --accent-foreground: 210 40% 96.1%;
@@ -26,7 +29,8 @@ html[data-theme="dark-purple"] {
 }
 
 html[data-theme="dark-red"] {
-    --background-image: url("/assets/backgrounds/fmMonitor-DarkRed.png");
+    /* --background-image: url("ASSETS PATH FOR DEV"), url("ASSETS PATH FOR PROD CDN") */
+    --background-image: url("/assets/backgrounds/fmMonitor-DarkRed.png"), url("/fmMonitor/assets/backgrounds/fmMonitor-DarkRed.png");
  
     --accent: 360 100% 32%;
     --accent-foreground: 210 40% 96.1%;
@@ -35,7 +39,8 @@ html[data-theme="dark-red"] {
 }
 
 html[data-theme="turquoise"] {
-    --background-image: url("/assets/backgrounds/fmMonitor-Turquoise.png");
+    /* --background-image: url("ASSETS PATH FOR DEV"), url("ASSETS PATH FOR PROD CDN") */
+    --background-image: url("/assets/backgrounds/fmMonitor-Turquoise.png"), url("/fmMonitor/assets/backgrounds/fmMonitor-Turquoise.png");
 
     --accent: 177 100% 32%;
     --accent-foreground: 210 40% 96.1%;
