@@ -72,7 +72,7 @@ export default function DashboardTemplate({
           <span style={{ position: "absolute", right: "15px", textAlign: "right", fontWeight: pageName === "Dashboard" ? "700" : "200", float: "right" }}>Dashboard</span>
         </Button>
 
-        <div className="fmDashboardLeftNavDivider" style={{ marginTop: "2px" }}>Servers</div>
+        <div className="fmDivider" style={{ marginTop: "2px" }}>Servers</div>
 
         <div className="fmDashboardLeftNavServers">
           {
@@ -86,7 +86,7 @@ export default function DashboardTemplate({
         </div>
 
         <div className="fmDashboardLeftNavBottom">
-          <div className="fmDashboardLeftNavDivider" style={{ marginBottom: "5px" }}>Settings</div>
+          <div className="fmDivider" style={{ marginBottom: "5px" }}>Settings</div>
 
           <Button style={{ width: "278px", height: "51px", background: "rgba(79, 79, 79, 0.7)", borderRadius: "7px", fontSize: "23px" }}>
             <Icons.Cog6ToothIcon width="30px" style={{ position: "absolute", left: "15px", textAlign: "left", float: "left" }} />

@@ -36,7 +36,7 @@
   position: relative;
   background: var(--background-image), rgba(32, 32, 32, 0.5);
   background-blend-mode: overlay;
-  background-size: 90vh;
+  background-size: 100vh;
   background-repeat: repeat;
   background-position: 0 0;
   background-clip: content-box;
@@ -175,7 +175,7 @@
   bottom: 0px;
 }
 
-.fmDashboardLeftNavDivider {
+.fmDivider {
   --text-divider-gap: 1rem;
   display: flex;
   align-items: center;
@@ -184,19 +184,31 @@
   letter-spacing: 0.1em;
 }
 
-.fmDashboardLeftNavDivider::before, .fmDashboardLeftNavDivider::after {
+.fmDivider::before, .fmDivider::after {
   content: '';
   height: 2px;
   background-color: rgba(255, 255, 255, 0.2);
   flex-grow: 1;
 }
 
-.fmDashboardLeftNavDivider::before {
+.fmDivider::before {
   margin-right: var(--text-divider-gap);
 }
 
-.fmDashboardLeftNavDivider::after {
+.fmDivider::after {
   margin-left: var(--text-divider-gap);
+}
+
+.fmLoginBtnPlatformIcon {
+  position: inherit;
+  float: left;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.fmLoginBtnPlatformText {
+  position: inherit;
+  float: right;
 }
 
 .fmDashboardLeftNavServers {
