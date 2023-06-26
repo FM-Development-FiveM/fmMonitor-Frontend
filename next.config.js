@@ -7,8 +7,9 @@ const nextConfig = {
     assetPrefix: isProd ? 'https://cdn.bluelineentertainment.net/fmMonitor/' : undefined,
     poweredByHeader: false,
     env: {
-        pageTitle: 'fmMonitor'
-    }
+        pageTitle: 'fmMonitor',
+        NEXTAUTH_URL: isProd ? 'https://test.fmmonitor.xyz' : 'http://localhost:3000',
+    },
 }
 
 module.exports = nextConfig

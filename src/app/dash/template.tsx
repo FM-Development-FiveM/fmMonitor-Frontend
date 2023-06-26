@@ -8,6 +8,8 @@ import { usePathname } from 'next/navigation'
 import * as Icons from "@heroicons/react/24/outline";
 import { RoutesInfoInterface } from '@/interfaces/IRoutesInfo'
 import * as Menubar from '@radix-ui/react-menubar';
+import { useSession, signOut } from "next-auth/react"
+import React from 'react';
 
 export default function DashboardTemplate({
   children,
@@ -15,6 +17,12 @@ export default function DashboardTemplate({
   children: React.ReactNode,
 }) {
   const router = useRouter()
+
+  const { data: session } = useSession()
+
+  React.useEffect(()=> {
+    if (!session) router.push('/auth/login');
+  });
 
   var serverRoutes: RoutesInfoInterface[] = [
     {  
@@ -47,11 +55,11 @@ export default function DashboardTemplate({
         <span className="fmDashboardTopNavRight">
           <Menubar.Root className="fmDashboardTopNavRightMenu">
             <Menubar.Menu>
-              <Menubar.Trigger className="UserProfileDropdown"><b>Username</b></Menubar.Trigger>
+              <Menubar.Trigger className="UserProfileDropdown"><b>{session?.user?.name}</b></Menubar.Trigger>
 
               <Menubar.Portal>
                 <Menubar.Content className="MenubarContent" align="start" sideOffset={5} alignOffset={-3}>
-                  <Menubar.Item onClick={() => AuthService.onLogout()} className="MenubarItem">
+                  <Menubar.Item onClick={() => signOut()} className="MenubarItem">
                     <Icons.ArrowLeftOnRectangleIcon width="23px" />
                     <span className="RightSlot"><b>Logout</b></span>
                   </Menubar.Item>

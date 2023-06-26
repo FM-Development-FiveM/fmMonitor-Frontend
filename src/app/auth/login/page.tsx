@@ -5,13 +5,15 @@ import * as Form from '@rebass/forms'
 import * as Rebass from 'rebass'
 import * as Icons from "@heroicons/react/24/outline";
 import React from 'react';
-import { SocialIcon } from 'react-social-icons';
-
-const isAlreadyLoggedIn: boolean = false;
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useSession, signIn } from "next-auth/react"
+import { faDiscord } from '@fortawesome/free-brands-svg-icons'
 
 export default function Page() {
+    const { data: session } = useSession()
+
     React.useEffect(()=> {
-        if (isAlreadyLoggedIn) redirect('/dash/home');
+        if (session) redirect('/dash/home');
     });
 
     const [getPasswordType, setPasswordType] = React.useState("password");
@@ -55,7 +57,7 @@ export default function Page() {
                     <br></br>
                     <Rebass.Button type="submit" onClick={loginUser} mb="15px" fontSize="20px" style={{ border: "3px solid rgba(255, 255, 255, 0.45)" }} backgroundColor="rgba(183, 181, 166, 3%)" width="100%">Login to fmMonitor</Rebass.Button>
                     <div className="fmDivider" style={{ marginBottom: "15px", marginTop: "5px" }}>Other Ways To Login</div>
-                    <Rebass.Button type="submit" onClick={loginUser} mb="15px" fontSize="20px" style={{ border: "3px solid rgba(255, 255, 255, 0.45)" }} backgroundColor="rgba(183, 181, 166, 3%)" width="100%"><SocialIcon network="discord" className="fmLoginBtnPlatformIcon" /><span className="fmLoginBtnPlatformText">Login with Discord</span></Rebass.Button>
+                    <Rebass.Button onClickCapture={() => signIn("discord")} type="submit" mb="15px" fontSize="20px" style={{ border: "3px solid rgba(255, 255, 255, 0.45)" }} backgroundColor="rgba(183, 181, 166, 3%)" width="100%"><FontAwesomeIcon icon={faDiscord} className="fmLoginBtnPlatformIcon" /><span className="fmLoginBtnPlatformText">Login with Discord</span></Rebass.Button>
                 </div>
             </div>
 
