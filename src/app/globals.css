@@ -200,15 +200,15 @@
 }
 
 .fmLoginBtnPlatformIcon {
-  position: inherit;
-  float: left;
   width: 30px !important;
   height: 30px !important;
+  color: #5865F2;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .fmLoginBtnPlatformText {
-  position: inherit;
-  float: right;
+  vertical-align: middle;
 }
 
 .fmDashboardLeftNavServers {
